@@ -20,5 +20,9 @@ Here we will use the wireframe planning and layout to identify the components an
 * Use `md-is-locked-open` to lock the `sidenav` open on the left
 * Use the `md-whiteframe-4dp` class to add a shadow the the `sidenav`
 
+### Step #3:
+
+Here you will use hard-coded elements to confirm rendering and layout of the container child elements and Angular Material components.
+
 ## references
 1. [angular-material-start](https://github.com/angular/material-start)
