@@ -8,11 +8,14 @@ import "../public/assets/app.css";
 // business
 import users from "./users/users.module";
 import controller from "./index.controller";
+// 模板由 gulp-angular-templatecache 自动生成
+import templates from "./templates.module";
 
 export default angular
     .module('mdApp', [
         'ngMaterial',
         'ui.router',
+        templates.name,
         users.name
     ])
     .config(($mdIconProvider, $locationProvider, $mdThemingProvider) => {
