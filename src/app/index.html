@@ -5,8 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>angular material start</title>
 </head>
-<body ng-cloak>
+<body ng-cloak layout="column">
 
+<!-- Container #1 (see wireframe) -->
+<md-toolbar layout="row" class="md-toolbar-tools">
+    <h1>Angular Material - Starter App</h1>
+</md-toolbar>
+
+<!-- Container #2 -->
+<div flex layout="row">
+
+    <!-- Container #3 -->
+    <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp">
+        Sidenav
+    </md-sidenav>
+
+    <!-- Container #4 -->
+    <md-content flex id="content">
+        Content
+    </md-content>
+
+</div>
 
 </body>
 </html>
