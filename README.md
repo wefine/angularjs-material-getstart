@@ -24,5 +24,12 @@ Here we will use the wireframe planning and layout to identify the components an
 
 Here you will use hard-coded elements to confirm rendering and layout of the container child elements and Angular Material components.
 
+### Step #4:
+Here you integrate your custom, application logic.
+* app.js internally loads the Users module
+* users.module.js defines your data services and the ContactSheet.html view (remember that this is provided by the tutorial)
+* index.controller.js contains your custom application logic (also provided for your convenience)
+
+
 ## references
 1. [angular-material-start](https://github.com/angular/material-start)
