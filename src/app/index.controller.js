@@ -1,3 +1,5 @@
+import angular from 'angular';
+
 /**
  * Main App Controller for the Angular Material Starter App
  * @param UsersDataService
@@ -5,19 +7,19 @@
  * @constructor
  */
 function AppController(UsersDataService, $mdSidenav) {
-    var self = this;
+    let self = this;
 
-    self.selected     = null;
-    self.users        = [ ];
+    self.selected = null;
+    self.users = [];
     self.selectUser = selectUser;
-    self.toggleList   = toggleUsersList;
+    self.toggleList = toggleUsersList;
 
     // Load all registered users
 
     UsersDataService
         .loadAllUsers()
-        .then( function( users ) {
-            self.users    = [].concat(users);
+        .then(function (users) {
+            self.users = [].concat(users);
             self.selected = users[0];
         });
 
@@ -36,9 +38,9 @@ function AppController(UsersDataService, $mdSidenav) {
      * Select the current avatars
      * @param menuId
      */
-    function selectUser ( user ) {
+    function selectUser(user) {
         self.selected = angular.isNumber(user) ? $scope.users[user] : user;
     }
 }
 
-export default [ 'UsersDataService', '$mdSidenav', AppController ];
+export default ['UsersDataService', '$mdSidenav', AppController];
