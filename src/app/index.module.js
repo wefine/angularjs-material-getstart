@@ -15,7 +15,7 @@ export default angular
         'ui.router',
         users.name
     ])
-    .config(($mdIconProvider, $locationProvider) => {
+    .config(($mdIconProvider, $locationProvider, $mdThemingProvider) => {
         $locationProvider.hashPrefix('!');
 
         // Register the user `avatar` icons
@@ -27,5 +27,9 @@ export default angular
             .icon("hangouts", "./assets/svg/hangouts.svg", 24)
             .icon("twitter", "./assets/svg/twitter.svg", 24)
             .icon("phone", "./assets/svg/phone.svg", 24);
+
+        $mdThemingProvider.theme('default')
+            .primaryPalette('brown')
+            .accentPalette('red');
     })
     .controller('AppController', controller);
