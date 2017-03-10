@@ -4,7 +4,9 @@
   "description": "angularjs phonecat with es6, webpack2, karma, etc.",
   "main": "index.js",
   "scripts": {
-    "docker" : "docker build -t wefine-material",
+    "predocker": "cross-env webpack",
+    "docker": "docker build -t wefine-material:getstart .",
+    "docker-run": "docker run -d --name material --restart always -p 18888:8080 wefine-material:getstart ",
     "prestart": "cross-env gulp",
     "test": "cross-env NODE_ENV=test ./node_modules/karma/bin/karma start",
     "start": "cross-env node ./node_modules/webpack-dev-server/bin/webpack-dev-server",
@@ -55,6 +57,7 @@
     "file-loader": "^0.10.1",
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "^2.0.0",
+    "gulp-shell": "^0.6.3",
     "html-webpack-plugin": "^2.28.0",
     "ignore-loader": "^0.1.2",
     "jasmine": "^2.5.3",
