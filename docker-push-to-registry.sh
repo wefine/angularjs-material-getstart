@@ -8,8 +8,8 @@ fi
 registry=$1
 image="wefine-material:getstart"
 
-docker tag ${image} ${registry}/${image}
-docker push ${registry}/${image}
-docker rmi ${registry}/${image}
+docker tag ${image} ${registry}/library/${image}
+docker push ${registry}/library/${image}
+docker rmi ${registry}/library/${image}
 
 exit 0
